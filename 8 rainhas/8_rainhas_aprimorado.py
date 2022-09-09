@@ -110,8 +110,8 @@ def evaluate_position_indexed_fitness(individual: List[int]) -> float:
 duration, log, fittest_individual_p8 = evolution(
     individual_generator=lambda: random.choices(range(8**2), k=8),
     fitness_evaluation=evaluate_position_indexed_fitness,
-    population_size=2500,
-    generations=100,
+    population_size=100,
+    generations=10000,
     crossover_rate=.5,
     mutation_rate=.5,
     mutation_function=(tools.mutUniformInt, {"low": 0, "up": 8**2 - 1, "indpb": 1/4}))
